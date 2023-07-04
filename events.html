@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TicketStation - Event Ticketing System</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <header>
+    <h1 class="Tstation">Welcome to TicketStation</h1>
+  </header>
+  <div class="search">
+    <label for="search-input">Search:</label>
+    <input type="text" id="search-input" placeholder="Search band or solo artist" />
+  </div>
+
+
+
+  <div class="category">
+    <label for="category-filter">Filter by Category:</label>
+    <select id="category-filter">
+      <option value="all">All</option>
+      <option value="Band">Band</option>
+      <option value="Solo Artist">Solo Artist</option>
+    </select>
+  </div>
+
+  <label for="date-filter" class="Filterdate">Filter by Date:</label>
+  <select id="date-filter">
+    <option value="all">All</option>
+    <option value="upcoming">Upcoming</option>
+    <option value="passed">Passed</option>
+  </select>
+
+
+  <div id="event-list"></div>
+  <script>
+        window.onload = function() {
+            // Retrieve the user object from session storage
+            const storedUser = sessionStorage.getItem('user');
+
+            if (storedUser) {
+                // Parse the user object from JSON format
+                const user = JSON.parse(storedUser);
+
+                // Display the greeting with the username
+                alert('Welcome, ' + user.name + '!');
+
+                // Clear the user object from session storage
+                sessionStorage.removeItem('user');
+            }
+        };
+  </script>
+  <script src="index.js">
+  </script>
+</body>
+</html>

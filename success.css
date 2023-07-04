@@ -1,0 +1,114 @@
+.container-wrapper {
+  padding: 40px; /* Add padding outside the container */
+}
+
+.container {
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 2%;
+  width: 100%;
+  height: 350px;
+  background-image: url(images/stage.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  box-shadow: 7px 7px 12px rgba(90, 175, 161, 0.699),
+    -7px -7px 12px rgba(120, 218, 203, 0.26);
+  color: #fff;
+}
+
+body {
+  background-color: #070d11;
+}
+
+h2 {
+  text-align: center;
+  padding: 50px 0 0 0;
+  color: rgba(139, 230, 213, 0.89);
+
+  font-size: 50px;
+  letter-spacing: 3px;
+}
+h3 {
+  font-family: "Righteous", cursive;
+  font-size: 40px;
+  color: rgb(212, 59, 144);
+  text-shadow: 2px 2px 5px rgba(28, 226, 233, 0.795);
+}
+
+h4 {
+  color: rgba(38, 250, 211, 0.89);
+  text-shadow: 3px 3px 8px rgba(189, 206, 203, 0.884),
+    -3px -3px 8px rgba(169, 202, 197, 0.753);
+}
+
+#backToEvents,
+#print-button {
+  display: inline-block;
+  border: radius 20px;
+  text-align: center;
+  padding: 10px 35px;
+  margin: 0 10px; /* Add margin between the buttons */
+  padding: 10px 35px 10px 35px;
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 100px;
+  background-image: linear-gradient(
+    109.6deg,
+    rgb(9, 9, 121) 11.2%,
+    rgb(144, 6, 161) 53.7%,
+    rgb(0, 212, 255) 100.2%
+  );
+  border: none;
+  box-shadow: 7px 7px 12px rgba(55, 42, 66, 0.562);
+  color: rgb(245, 242, 242);
+}
+
+.ticket-details {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+}
+
+#event-details {
+  font-weight: 600;
+}
+
+.barcode {
+  padding: 140px 0 0 0;
+  width: 70%;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    height: 600px;
+    padding: 0 15px; /* Adjust the padding as per your needs */
+  }
+
+  .ticket-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .col-lg-8,
+  .col-lg-4 {
+    width: 80%;
+  }
+
+  .barcode {
+    padding: 20px 0 10px 0;
+    width: 100%;
+  }
+
+  h3 {
+    font-family: "Righteous", cursive;
+    font-size: 60px;
+    color: rgb(212, 59, 144);
+    text-shadow: 2px 2px 5px rgba(28, 226, 233, 0.795);
+  }
+}
